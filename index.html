@@ -13,16 +13,21 @@
     }
   </style>
 
-  <script src="head.loader.js"></script>
+  <script src="head.min.js"></script>
   <script type="text/javascript">
-    head.js("../lattice/lattice.js",
+    head.js("../lattice/input_manager.js",
+            "../lattice/level_manager.js",
+            "../lattice/state_manager.js",
+            "../lattice/lattice.js",
+            "./hero.js",
             "./levels.js",
             "./states.js",
-            "./game.js"
+            "./game.js",
             function() {
               var game = new Game('canvas', 600, 600);
-              game.init();
               lattice.init(game, 'canvas');
+              game.init();
+              lattice.startLoop();
             });
   </script>
 </head>

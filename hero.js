@@ -16,16 +16,15 @@ Hero.prototype.draw = function (ctx) {
 };
 
 Hero.prototype.update = function (elapsedTime) {
-	if (lattice.inputManager.keyIsHeld)
 	// Player holding up
-	if (lattice.inputManager.keyIsHeld(38)) { this.y -= this.extraSpeed * elapsedTime; }
+	if (lattice.inputManager.keyIsHeld(38)) { debugger; this.y -= 10 * elapsedTime; }
 	
 	// Player holding down
-	if (lattice.inputManager.keyIsHeld(40)) { this.y += this.extraSpeed * elapsedTime; }
+	if (lattice.inputManager.keyIsHeld(40)) { this.y += 10 * elapsedTime; }
 	
 	// Player holding left
-	if (lattice.inputManager.keyIsHeld(37)) { this.x -= this.extraSpeed * elapsedTime; }
+	if (lattice.inputManager.keyIsHeld(37)) { this.x -= 10 * elapsedTime; }
 	
 	// Player holding right
-	if (lattice.inputManager.keyIsHeld(39)) { this.x += this.extraSpeed * elapsedTime; }
+	if (lattice.inputManager.keyIsHeld(39)) { this.x += 10 * elapsedTime; }
 };
