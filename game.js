@@ -6,6 +6,8 @@
     init: function() {
       _lattice_.levelManager.addLevel(1, new FirstLevel(this));
       _lattice_.stateManager.addState('playing', playingState);
+
+      _lattice_.stateManager.addState('gameOver', gameOverState);      
       _lattice_.stateManager.currentState = 'playing';
     },
 

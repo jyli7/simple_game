@@ -20,6 +20,9 @@ Hero.prototype.draw = function (ctx) {
 };
 
 Hero.prototype.update = function (elapsedTime) {
+	if (_lattice_.zoneChecker.vertexInAnyTargetZones(this, [_lattice_.levelManager.currentLevelObj().enemy])) {
+		_lattice_.stateManager.currentState = 'gameOver';
+	}
 
 	// Player holding up
 	if (_lattice_.inputManager.keyIsHeld(38)) { 
