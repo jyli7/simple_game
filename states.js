@@ -1,4 +1,4 @@
 var playingState = function () {
-	lattice.update(lattice.loopTimeElapsed);
-	lattice.draw(lattice.ctx);
+	_lattice_.update(_lattice_.loopTimeElapsed);
+	_lattice_.draw(_lattice_.ctx);
 }

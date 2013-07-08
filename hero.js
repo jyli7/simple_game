@@ -1,5 +1,5 @@
 var Hero = function () {
-	lattice.zoneChecker.zonify(this);
+	_lattice_.zoneChecker.zonify(this);
 	this.shape = 'rectangle';
 	this.width = 20;
 	this.height = 20;
@@ -24,25 +24,25 @@ Hero.prototype.draw = function (ctx) {
 Hero.prototype.update = function (elapsedTime) {
 
 	// Player holding up
-	if (lattice.inputManager.keyIsHeld(38)) { 
+	if (_lattice_.inputManager.keyIsHeld(38)) { 
 		this.yBottom -= 100 * elapsedTime;
 		this.yTop -= 100 * elapsedTime;
 	}
 	
 	// Player holding down
-	if (lattice.inputManager.keyIsHeld(40)) { 
+	if (_lattice_.inputManager.keyIsHeld(40)) { 
 		this.yBottom += 100 * elapsedTime;
 		this.yTop += 100 * elapsedTime;
 	}
 	
 	// Player holding left
-	if (lattice.inputManager.keyIsHeld(37)) { 
+	if (_lattice_.inputManager.keyIsHeld(37)) { 
 		this.xLeft -= 100 * elapsedTime;
 		this.xRight -= 100 * elapsedTime;
 	}
 	
 	// Player holding right
-	if (lattice.inputManager.keyIsHeld(39)) {
+	if (_lattice_.inputManager.keyIsHeld(39)) {
 		this.xLeft += 100 * elapsedTime;
 		this.xRight += 100 * elapsedTime;
 	}

@@ -1,5 +1,5 @@
 var Enemy = function () {
-	lattice.zoneChecker.zonify(this);
+	_lattice_.zoneChecker.zonify(this);
 	this.shape = 'rectangle';
 	this.width = 20;
 	this.height = 20;

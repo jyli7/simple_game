@@ -15,11 +15,11 @@
 
   <script src="head.min.js"></script>
   <script type="text/javascript">
-    head.js("../lattice/input_manager.js",
-            "../lattice/zone_checker.js",
-            "../lattice/level_manager.js",
-            "../lattice/state_manager.js",
-            "../lattice/lattice.js",
+    head.js("../lattice/src/input_manager.js",
+            "../lattice/src/zone_checker.js",
+            "../lattice/src/level_manager.js",
+            "../lattice/src/state_manager.js",
+            "../lattice/src/lattice.js",
             "./hero.js",
             "./enemy.js",
             "./levels.js",
@@ -27,9 +27,9 @@
             "./game.js",
             function() {
               var game = new Game('canvas', 600, 600);
-              lattice.init(game, 'canvas');
+              _lattice_.init(game, 'canvas');
               game.init();
-              lattice.startLoop();
+              _lattice_.startLoop();
             });
   </script>
 </head>
