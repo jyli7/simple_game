@@ -1,6 +1,5 @@
 var Hero = function () {
 	_lattice_.zoneChecker.zonify(this);
-	this.shape = 'rectangle';
 	this.width = 20;
 	this.height = 20;
 
@@ -8,7 +7,6 @@ var Hero = function () {
 	this.xRight = this.xLeft + this.width;
 	this.yBottom = canvas.height / 2;
 	this.yTop = this.yBottom - this.height;
-	
 };
 
 Hero.prototype.draw = function (ctx) {
